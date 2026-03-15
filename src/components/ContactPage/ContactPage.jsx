@@ -30,6 +30,8 @@ const Clock = () => (
   </svg>
 );
 
+//TODO: fixa så att man FAKTISK kan skicka meddelanden till hotellet
+
 function ContactPage() {
   return (
     <div className="contact-page">
@@ -89,7 +91,6 @@ function ContactPage() {
             </div>
           </div>
 
-        //TODO: fixa så att man FAKTIST kan skicka meddelande till hotellet, på riktigt!
           <div className="contact-form-card">
             <p className="section-kicker">Skicka en förfrågan</p>
             <h2>Hör av dig till oss</h2>

@@ -16,29 +16,121 @@ function RestaurantPage() {
 
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [confirmedBooking, setConfirmedBooking] = useState(null);
+  const [activeMenu, setActiveMenu] = useState(null);
 
 
   //TODO: OM tiden räcker till skapa en meny för lunch/middag med maträtter/priser och Kidsmeny med!
   const mealOptions = [
     {
+      key: "breakfast",  
       name:"Frukost",
       time: "06:30 - 11:00",
       description: "Starta dagen med nybakat bröd, färsk frukt, kaffe och en lugn atmosfär.",
       image:  "/images/frruu.jpg",
     },
     {
+        key: "lunch",
       name: "Lunch",
       time: "12:00 - 15:00",
       description: "Säsongsbetonade rätter med eleganta smaker och noggrant utvalda råvaror.",
       image: "/images/buffe1.jpg",
     },
     {
+       key: "dinner", 
       name: "Middag",
       time: "17:00 - 22:00",
       description:  "En varm och exklusiv kvällsupplevelse med moderna rätter och stämningsfull miljö.",
       image: "/images/middag.webp",
     },
   ];
+
+  //TODO: CHECK!! tiden räcker till för en menydata wuhuu
+
+  const menuData = {
+    breakfast: {
+        title: "Frukostmeny",
+        info: "Frukost ingår i hotellbokningen för alla gäster.",
+        buffet: [
+      "Nygräddat bröd och croissanter",
+      "Yoghurt, müsli och färsk frukt",
+      "Äggröra, bacon och korv",
+      "Mängder med pålägg och grönsaker",
+      "Våfflor med chocklad och andra tillbehör",
+      "Pannkakor med sylt och grädde",
+      "Kaffe, oboy, te och juice"
+        ]
+    },
+    
+  lunch: {
+    title: "Lunchmeny",
+    buffetPrice: 195,
+    aLaCarte: [
+      {
+        name: "Caesarsallad",
+        description: "Kyckling, romansallad, parmesan och krutonger",
+        price: 165
+      },
+      {
+        name: "Räksmörgås",
+        description: "Handskalade räkor, ägg, majonnäs och citron",
+        price: 185
+      },
+      {
+        name: "Vegetarisk pasta",
+        description: "Krämig pasta med rostade grönsaker och parmesan",
+        price: 155
+      }
+    ],
+    kids: [
+      {
+        name: "Pannkakor",
+        description: "Serveras med sylt och grädde",
+        price: 75
+      },
+      {
+        name: "Köttbullar med potatismos",
+        description: "Barnportion med milda smaker",
+        price: 89
+      }
+    ]
+  },
+
+  dinner: {
+    title: "Middagsmeny",
+    buffetPrice: 395,
+    aLaCarte: [
+      {
+        name: "Grillad oxfilé",
+        description: "Rödvinssås, potatisgratäng och säsongens grönsaker",
+        price: 395
+      },
+      {
+        name: "Halstrad lax",
+        description: "Citronrisotto, sparris och brynt smör",
+        price: 325
+      },
+      {
+        name: "Tryffelpasta",
+        description: "Krämig pasta med tryffel och parmesan",
+        price: 275
+      }
+    ],
+    kids: [
+      {
+        name: "Mini hamburgare",
+        description: "Med pommes och ketchup",
+        price: 95
+      },
+      {
+        name: "Pasta bolognese",
+        description: "Mild tomatsås och riven ost",
+        price: 89
+      }
+    ]
+  }
+};
+
+
 
   // funderar på om jag ska ta bort denna. blir lite mycket på sidan maybeee
   const galleryImages = [
@@ -157,17 +249,127 @@ function RestaurantPage() {
                 <p className="meal-time">{meal.time}</p>
                 <p className="meal-description">{meal.description}</p>
 
-                <button
-                  className="meal-button"
-                  onClick={() => handleSelectMeal(meal.name)}
+                <div className="meal-actions">
+            <button
+                className="meal-button secondary"
+                onClick={() => setActiveMenu(meal.key)}
                 >
-                  Välj denna
-                </button>
-              </div>
+                    Meny
+                    </button>
+
+                    <button className="meal-button"
+                 onClick={() => handleSelectMeal(meal.name)}
+                    >
+                Boka bord
+             </button>
+            </div>
+            </div>
+
             </div>
           ))}
         </div>
+        
       </section>
+
+    {activeMenu && menuData[activeMenu] && (
+  <div className="restaurant-menu-overlay" onClick={() => setActiveMenu(null)}>
+    <div
+      className="restaurant-menu-modal"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="menu-header">
+        <h3>{menuData[activeMenu].title}</h3>
+        <button
+          className="close-menu-button"
+          onClick={() => setActiveMenu(null)}
+        >
+          Stäng
+        </button>
+      </div>
+
+     {activeMenu === "breakfast" && (
+  <>
+    <div className="breakfast-menu-intro">
+      <p>
+        <strong>{menuData.breakfast.info}</strong>
+      </p>
+    </div>
+
+    <h4 className="breakfast-menu-title">Frukostbuffé</h4>
+
+    <ul className="breakfast-menu-list">
+      {menuData.breakfast.buffet.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  </>
+)}
+
+
+      {activeMenu === "lunch" && (
+        <>
+          <p className="menu-info">
+            Lunchbuffé: <strong>{menuData.lunch.buffetPrice} kr</strong>
+          </p>
+
+          <h4>À la carte</h4>
+          {menuData.lunch.aLaCarte.map((dish) => (
+            <div className="menu-item" key={dish.name}>
+              <div>
+                <h5>{dish.name}</h5>
+                <p>{dish.description}</p>
+              </div>
+              <span>{dish.price} kr</span>
+            </div>
+          ))}
+
+          <h4>Barnmeny</h4>
+          {menuData.lunch.kids.map((dish) => (
+            <div className="menu-item" key={dish.name}>
+              <div>
+                <h5>{dish.name}</h5>
+                <p>{dish.description}</p>
+              </div>
+              <span>{dish.price} kr</span>
+            </div>
+          ))}
+        </>
+      )}
+
+      {activeMenu === "dinner" && (
+        <>
+          <p className="menu-info">
+            Middagsbuffé: <strong>{menuData.dinner.buffetPrice} kr</strong>
+          </p>
+
+          <h4>À la carte</h4>
+          {menuData.dinner.aLaCarte.map((dish) => (
+            <div className="menu-item" key={dish.name}>
+              <div>
+                <h5>{dish.name}</h5>
+                <p>{dish.description}</p>
+              </div>
+              <span>{dish.price} kr</span>
+            </div>
+          ))}
+
+          <h4>Barnmeny</h4>
+          {menuData.dinner.kids.map((dish) => (
+            <div className="menu-item" key={dish.name}>
+              <div>
+                <h5>{dish.name}</h5>
+                <p>{dish.description}</p>
+              </div>
+              <span>{dish.price} kr</span>
+            </div>
+          ))}
+        </>
+      )}
+    </div>
+  </div>
+)}
+
+
 
       {bookingConfirmed && confirmedBooking ? (
         <section className="restaurant-confirmation container">
