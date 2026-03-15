@@ -1,0 +1,125 @@
+/*==============================
+ABOU US SIDAN
+lite simplare än resten av appen :')
+================================*/
+
+.about-section {
+  background-color: #f8f6f2;
+  padding: 120px 20px 100px;
+}
+
+.about-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-subtitle {
+  font-size: 15px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #c79a3b;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+.about-title {
+  font-size: clamp(46px, 6vw, 78px);
+  line-height: 1.1;
+  color: #1f2d50;
+  font-weight: 500;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.about-divider {
+  width: 70px;
+  height: 1.5px;
+  background-color: #c79a3b;
+  margin: 28px auto 42px;
+}
+
+.about-text {
+  max-width: 950px;
+  margin: 0 auto 28px;
+  font-size: 23px;
+  line-height: 1.9;
+  color: #5f7291;
+  font-weight: 400;
+}
+
+.about-highlight {
+  color: #1f2d50;
+  font-weight: 500;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 90px;
+}
+
+.about-stat {
+  text-align: center;
+}
+
+.about-stat-value {
+  font-size: clamp(48px, 5vw, 68px);
+  color: #c79a3b;
+  margin: 0 0 6px;
+  font-weight: 500;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.about-stat-label {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #5f7291;
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 90px 20px 80px;
+  }
+
+  .about-text {
+    font-size: 19px;
+    line-height: 1.8;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-title {
+    font-size: 42px;
+  }
+
+  .about-subtitle {
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  .about-text {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .about-stat-value {
+    font-size: 46px;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

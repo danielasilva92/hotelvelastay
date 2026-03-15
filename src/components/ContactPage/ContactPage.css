@@ -1,0 +1,259 @@
+/* ========================================
+   KONTAKTSIDA
+   
+   ======================================== */
+
+.contact-page {
+  background: #f8f6f2;
+  padding-bottom: 100px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  margin-bottom: 90px;
+}
+
+.contact-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75);
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(19, 28, 45, 0.65), rgba(19, 28, 45, 0.25));
+}
+
+.contact-hero-content {
+  position: absolute;
+  inset: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+}
+
+.contact-kicker,
+.section-kicker {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d0a046;
+  margin-bottom: 16px;
+}
+
+.contact-hero-content h1 {
+  font-size: clamp(52px, 7vw, 86px);
+  line-height: 1;
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+.contact-hero-content p {
+  max-width: 650px;
+  font-size: 22px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-main {
+  margin-bottom: 90px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: white;
+  border-radius: 24px;
+  padding: 42px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.06);
+}
+
+.contact-info-card h2,
+.contact-form-card h2 {
+  font-size: 48px;
+  margin: 0 0 28px;
+  color: #1f2d50;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid #ece5db;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: #f4eee5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a28763;
+}
+
+.contact-item h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: #1f2d50;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #5f7291;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+  color: #1f2d50;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 16px 18px;
+  border: 1px solid #e4ddd2;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #fcfbf9;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #c79a3b;
+  box-shadow: 0 0 0 3px rgba(199, 154, 59, 0.12);
+}
+
+.contact-button {
+  background: #a28763;
+  color: white;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #8f7655;
+}
+
+.contact-visit-card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 34px;
+  align-items: center;
+  background: white;
+  border-radius: 28px;
+  padding: 26px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.06);
+}
+
+.contact-visit-text {
+  padding: 26px;
+}
+
+.contact-visit-text h2 {
+  font-size: 52px;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  color: #1f2d50;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.contact-visit-text p:last-child {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5f7291;
+}
+
+.contact-visit-image-wrapper {
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.contact-visit-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .contact-grid,
+  .contact-visit-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    height: 420px;
+  }
+
+  .contact-hero-content {
+    padding: 0 24px;
+  }
+
+  .contact-hero-content p {
+    font-size: 18px;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 28px 22px;
+  }
+
+  .contact-info-card h2,
+  .contact-form-card h2,
+  .contact-visit-text h2 {
+    font-size: 38px;
+  }
+
+  .contact-visit-text {
+    padding: 8px;
+  }
+}

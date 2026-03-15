@@ -1,0 +1,53 @@
+/* =============================================
+   FOOTER
+   som konstigt nog tog mig 4 år känns det som:')
+   en dag utan Nocco = fasta på småsaker
+   ============================================= */
+
+.footer {
+  background: #25365c;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.footer-section h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  color: #d4a04a;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+  padding: 18px 0 20px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.footer-bottom::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #d4a04a;
+  margin: 0 auto 14px auto;
+}

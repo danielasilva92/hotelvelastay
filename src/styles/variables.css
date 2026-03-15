@@ -1,0 +1,38 @@
+:root {
+    /*Samlar de viktigaste färgerna i min app här*/
+    --color-primary: #8b7355;
+    --color-primary-dark: #6d5940;
+    --color-dark: #2c2c2c;
+    --color-success: #4CAF50;
+    --color-gray: #666;
+    --color-white: #ffffff;
+    --color-light-gray: #f9f9f9;
+    --color-error: #f44336;
+    --color-border: #eee;
+    --color-light: #f5f5dc;
+
+    /*spacing*/
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+
+    /*border radius*/
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-round:50%;
+
+    /*transitions*/
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /*skuggor*/
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.15)
+
+}

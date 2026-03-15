@@ -1,0 +1,183 @@
+.homepage {
+    width: 100%;
+}
+
+
+/*Hero sektionen*/
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/vela-lobby.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    max-width: 800px;
+     max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+.cta-button {
+    background: white;
+    color: #8b7355;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+.cta-button:hover {
+    background: #f5f1ed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.cta-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+}
+
+
+
+.book-button {
+    background: #8b7355;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+}
+
+.book-button:hover {
+    background: #6f5a43;
+
+}
+
+/* ===============================
+SPA HERO SECTION
+================================ */
+
+.spa-section {
+  position: relative;
+  width: 100%;
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+
+.spa-background {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  border-radius: 26px;
+}
+
+.spa-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.spa-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(19, 28, 45, 0.75),
+    rgba(19, 28, 45, 0.25)
+  );
+}
+
+.spa-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 150px;
+  max-width: 520px;
+  color: white;
+}
+
+.spa-kicker {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d0a046;
+  margin-bottom: 14px;
+}
+
+.spa-title {
+  font-size: 60px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.spa-text {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,0.9);
+}
+
+.spa-cta {
+  background: white;
+  color: #1f2d50;
+  border: none;
+  padding: 16px 34px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spa-cta:hover {
+  background: #d0a046;
+  color: white;
+}
+@media (max-width: 900px) {
+
+  .spa-background {
+    height: 520px;
+  }
+
+  .spa-content {
+    left: 30px;
+    right: 30px;
+  }
+
+  .spa-title {
+    font-size: 42px;
+  }
+
+  .spa-text {
+    font-size: 18px;
+  }
+
+}
