@@ -1,7 +1,7 @@
 /* =============================================
    FOOTER
    som konstigt nog tog mig 4 år känns det som:')
-   en dag utan Nocco = fasta på småsaker
+   en dag utan Nocco = fastna på småsaker
    ============================================= */
 
 .footer {
@@ -14,7 +14,11 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding-bottom: 15px;
+  padding: 0 20px 15px;
+}
+
+.footer-section {
+  min-width: 0;
 }
 
 .footer-section h3 {
@@ -33,12 +37,13 @@
   font-size: 15px;
   margin-bottom: 8px;
   opacity: 0.9;
+  word-break: break-word;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
-  padding: 18px 0 20px;
+  padding: 18px 16px 20px;
   font-size: 14px;
   opacity: 0.75;
 }
@@ -51,44 +56,37 @@
   background: #d4a04a;
   margin: 0 auto 14px auto;
 }
+
 @media (max-width: 768px) {
-  .footer,
-  .site-footer {
-    padding: 40px 16px 24px;
+  .footer {
+    padding-top: 32px;
   }
 
-  .footer-content,
-  .footer-grid {
-    display: grid;
+  .footer-content {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
+    padding: 0 16px 20px;
   }
 
-  .footer-column {
-    min-width: 0;
+  .footer-section h3 {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
   }
 
-  .footer h2,
-  .footer h3,
-  .site-footer h2,
-  .site-footer h3 {
-    font-size: 1.8rem;
-    line-height: 1.15;
-    margin-bottom: 12px;
+  .footer-section h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
   }
 
-  .footer p,
-  .footer a,
-  .site-footer p,
-  .site-footer a {
+  .footer-section p {
     font-size: 1rem;
     line-height: 1.7;
-    word-break: break-word;
+    margin-bottom: 6px;
   }
 
-  .footer-bottom,
-  .copyright {
-    text-align: center;
+  .footer-bottom {
     font-size: 0.95rem;
+    padding: 18px 16px 24px;
   }
 }
