@@ -20,12 +20,12 @@ import BookingPage from './components/BookingPage/BookingPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
-import standardrumImg from './assets/standardrum.png';
-import dubbelImg from './assets/dubbel.png';
-import familyImg from './assets/family.png';
-import svitImg from './assets/svit1.png';
-import sparumImg from './assets/sparum.png';
-import penthouseImg from './assets/penthouse.png';
+import standardrumImg from './public/images/standardrum.png';
+import dubbelImg from './public/images/dubbel.png';
+import familyImg from './public/images/family.png';
+import svitImg from './public/images/svit1.png';
+import sparumImg from './public/images/sparum.png';
+import penthouseImg from './public/images/penthouse.png';
 
 import './styles/global.css';
 import './styles/utilities.css';
