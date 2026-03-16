@@ -230,17 +230,9 @@
 }
 
 @media (max-width: 768px) {
-  .contact-page {
-    padding-bottom: 56px;
-  }
-
-  .container {
-    padding: 0 16px;
-  }
-
-  .contact-hero {
+ .contact-hero {
     height: auto;
-    min-height: 46vh;
+    min-height: unset;
     margin-bottom: 32px;
   }
 
