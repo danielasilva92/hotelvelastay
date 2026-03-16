@@ -36,7 +36,7 @@ function ContactPage() {
   return (
     <div className="contact-page">
       <section className="contact-hero">
-        <img src= {`${import.meta.env.BASE_UR}images/kontata.jpg`}
+        <img src= {`${import.meta.env.BASE_URL}images/kontata.jpg`}
           alt="Kontakta Hotel Vela Stay"
           className="contact-hero-image"
         />

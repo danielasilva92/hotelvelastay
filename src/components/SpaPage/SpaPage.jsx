@@ -314,7 +314,7 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
           name="roomNumber"
           value={booking.roomNumber}
           onChange={handleInputChange}
-          placeholder="Till exempel 67"
+          placeholder="Till exempel 67. OBS! skriv in 0 om du ej bor på hotellet"
           required
         />
       </div>
