@@ -20,6 +20,12 @@ import BookingPage from './components/BookingPage/BookingPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
+import standardrumImg from './assets/standardrum.png';
+import dubbelImg from './assets/dubbel.png';
+import familyImg from './assets/family.png';
+import svitImg from './assets/svit1.png';
+import sparumImg from './assets/sparum.png';
+import penthouseImg from './assets/penthouse.png';
 
 import './styles/global.css';
 import './styles/utilities.css';
@@ -39,7 +45,7 @@ function App() {
             size: "30 M²",
             description: "Stilrent rum med extra komfort, större säng och utsikt över staden.",
             features: ["Fri Wi-Fi, ", "Smart-TV, ", "Arbetsyta, ", "Minibar, ", "Regndusch"],
-            imageUrl: "/images/standardrum.png",
+            imageUrl: standardrumImg,
       },
           {
             id: 2,
@@ -49,7 +55,7 @@ function App() {
             size: "40 M²",
             description: "Elegant rum med premium känsla, med balkong och utsikt över vår fina baksida .",
             features: ["Fri Wi-Fi, ", "Smart-TV, ", "Loungeyta,", "Minibar, ", "Regndusch, ", "Panoramautsikt,"],
-            imageUrl: "/images/dubbel.png",
+            imageUrl: dubbelImg,
           },
           {
              id: 3,
@@ -59,7 +65,7 @@ function App() {
             size: "50 M²",
             description: "Rymligt familjerum med dubbelsäng, våningssäng, loungeyta och plats för hela familjen i en varm och elegant miljö.",
             features: ["Fri Wi-Fi, ", "TV, ", "Familjevänligt, ", "Loungeyta, ", "Balkong, ", "Extra sovplatser"],
-            imageUrl: "/images/family.png",
+            imageUrl: familyImg,
           },
           {
             id: 4,
@@ -69,7 +75,7 @@ function App() {
             size: "60 M²",
             description: 'Luksuriös svit med separat vardagsrum och exklusiva bekvämligheter.',
             features: ['Fri Wi-Fi, ', 'Vardagsrum, ', 'Balkong, ','Spa badkar, '],
-            imageUrl: '/images/svit1.png',
+            imageUrl: svitImg,
           },
           
           {
@@ -80,7 +86,7 @@ function App() {
             size: "70 M²",
             description:"Lyxig svit med privat jacuzzi, lounge och exklusiv spa-atmosfär.",
             features: ["Privat Jacuzzi, ", "Spa badrum, ", "Vardagsrum, ", "Panoramautsikt, ", "Minibar"],
-            imageUrl: "/images/sparum.png",
+            imageUrl: sparumImg,
           },
          {
           id: 6,
@@ -90,7 +96,7 @@ function App() {
           size: "85 M²",
           description: "Exklusiv takvåningssvit med panoramautsikt, privat terrass och elegant skandinavisk design. Perfekt för en oförglömlig vistelse.",
           features:  ["Privat takterrass, ", "Panoramautsikt över staden, ", "King size säng, ", "Separat vardagsrum, ", "Lyxbadrum med badkar, ", "Champagne vid ankomst"],
-          imageUrl: "/images/penthouse.png",
+          imageUrl: penthouseImg,
          }
         ]);
       
