@@ -13,6 +13,7 @@ Hotel Vela Stay är en modern hotellwebbplats byggd med React och Vite.
 Applikationen simulerar en lyxig hotellupplevelse där användare kan utforska rum, boka vistelser, reservera restaurangbord och boka spabehandlingar.
 
 Projektet är utvecklat som en del av mina studier inom frontendutveckling och fokuserar på komponentbaserad struktur, routing och responsiv design.
+
 ---
 
 
@@ -32,6 +33,7 @@ Projektet är utvecklat som en del av mina studier inom frontendutveckling och f
 📱 Responsiv design som fungerar på mobil, surfplatta och dator
 
 Bokningar sparas tillfälligt i LocalStorage för att simulera ett riktigt bokningssystem.
+
 ---
 
 🛠 Tekniker
@@ -50,7 +52,8 @@ Projektet är byggt med:
 
 - LocalStorage
 
-- -
+
+---
 
 🚀 Starta projektet lokalt
 
@@ -65,4 +68,5 @@ Starta utvecklingsservern:
 Öppna sedan i webbläsaren:
 
 http://localhost:5173
+
 ---
