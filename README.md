@@ -4,7 +4,7 @@
 
 You can view the live project here:
 
-👉 https://danielasilva92.github.io
+👉 https://danielasilva92.github.io/hotelvelastay
 ---
 
 🏨 Hotel Vela Stay
