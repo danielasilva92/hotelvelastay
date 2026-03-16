@@ -8,7 +8,7 @@ import { useState } from 'react';
 //BroweserRouter används för att wrappa hela appen 
 //Routes är containern som håller alla mina route definitioner
 
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //importerar mina esidkomponenter
 import AboutUs from './components/AbousUs/AboutUs';
