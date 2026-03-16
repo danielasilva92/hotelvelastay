@@ -490,15 +490,15 @@ ERRORMEDDELANDEN
 @media (max-width: 768px) {
   .booking-hero {
     height: auto;
-    min-height: 72vh;
+    min-height: 56vh;
     max-height: none;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 
   .booking-hero-content {
-    padding: 24px 16px 32px;
-    justify-content: center;
-    align-items: flex-start;
+    padding: 20px 16px 24px;
+    justify-content: flex-start;
+    padding-top: 48px;
   }
 
   .booking-kicker {
@@ -728,4 +728,10 @@ ERRORMEDDELANDEN
   .side-summary-box strong {
     font-size: 1.5rem;
   }
+}
+
+@meida (max-width:480px) {
+    .booking-hero {
+        min-height: 50vh;
+    }
 }

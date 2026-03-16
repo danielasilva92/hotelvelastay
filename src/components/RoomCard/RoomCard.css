@@ -145,43 +145,104 @@ jag kortrummen likadana
 
 @media (max-width: 768px) {
   .rooms-preview {
-    padding: 70px 16px;
+    padding: 56px 16px;
   }
 
   .section-title {
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 28px;
+  }
+
+  .rooms-grid {
+    gap: 24px;
+  }
+
+  .room-image-wrapper {
+    height: 240px;
   }
 
   .room-card-content {
-    padding: 28px 24px 30px;
+    padding: 20px 16px 22px;
   }
 
   .room-card-header {
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    margin-bottom: 14px;
   }
 
   .room-card-title {
-    font-size: 28px;
+    font-size: 2rem;
+    line-height: 1;
   }
 
   .room-card-size {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
     margin-top: 0;
   }
 
   .room-card-description {
-    font-size: 17px;
+    font-size: 1rem;
+    line-height: 1.6;
     max-width: 100%;
+    margin: 0 0 20px;
   }
 
   .room-card-footer {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
+  }
+
+  .room-card-price {
+    font-size: 1rem;
+  }
+
+  .room-card-price span {
+    font-size: 1.3rem;
+  }
+
+  .room-card-price small {
+    font-size: 0.95rem;
   }
 
   .room-card-button {
     width: 100%;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms-preview {
+    padding: 48px 14px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .room-image-wrapper {
+    height: 210px;
+  }
+
+  .room-card-content {
+    padding: 18px 14px 20px;
+  }
+
+  .room-card-title {
+    font-size: 1.75rem;
+  }
+
+  .room-card-description {
+    font-size: 0.95rem;
+  }
+
+  .room-card-button {
+    letter-spacing: 1.5px;
   }
 }

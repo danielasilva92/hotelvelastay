@@ -117,20 +117,6 @@
   background: rgba(255, 255, 255, 0.18);
 }
 
-@media (max-width: 768px) {
-  .luxury-spa-hero {
-    min-height: 480px;
-    height: 70vh;
-  }
-
-  .spa-hero-content {
-    padding: 0 24px;
-  }
-
-  .spa-hero-text {
-    font-size: 18px;
-  }
-}
 .spa-intro {
   text-align: center;
   margin-bottom: 70px;
@@ -298,11 +284,6 @@
   color: white;
 }
 
-@media (max-width: 1100px) {
-  .treatments-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .spa-booking-wrapper {
   margin-bottom: 70px;
@@ -392,41 +373,6 @@
   line-height: 1.7;
 }
 
-@media (max-width: 1100px) {
-  .spa-gallery-grid,
-  .facilities-grid,
-  .treatments-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .spa-hero {
-    height: 420px;
-  }
-
-  .spa-hero-content h1 {
-    font-size: 42px;
-  }
-
-  .spa-hero-content p,
-  .spa-intro p {
-    font-size: 18px;
-  }
-
-  .section-heading h2,
-  .spa-booking-form h2 {
-    font-size: 38px;
-  }
-
-  .spa-booking-form {
-    padding: 30px 22px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
 
 /*=========================
 BOKNINGSBEKRÄFTELSE
@@ -519,7 +465,19 @@ BOKNINGSBEKRÄFTELSE
 .spa-confirmation-button:hover {
   background: #8f7655;
 }
+@media (max-width: 1100px) {
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
+@media (max-width: 1100px) {
+  .spa-gallery-grid,
+  .facilities-grid,
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 768px) {
   .spa-confirmation-card {
@@ -534,5 +492,278 @@ BOKNINGSBEKRÄFTELSE
     font-size: 15px;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .spa-page {
+    padding-bottom: 56px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .luxury-spa-hero {
+    height: auto;
+    min-height: 58vh;
+    max-height: none;
+    margin-bottom: 42px;
+  }
+
+  .spa-hero-content {
+    padding: 20px 16px 24px;
+    justify-content: flex-start;
+    padding-top: 48px;
+  }
+
+  .spa-kicker {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+  .luxury-spa-hero h1 {
+    font-size: 3rem;
+    line-height: 0.95;
+    margin-bottom: 14px;
+  }
+
+  .spa-hero-text {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .spa-hero-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .spa-hero-button {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  .spa-intro {
+    margin-bottom: 42px;
+  }
+
+  .spa-intro p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .spa-gallery {
+    margin-bottom: 48px;
+  }
+
+  .spa-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .spa-gallery-card {
+    border-radius: 18px;
+  }
+
+  .spa-gallery-card img {
+    min-height: 220px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading h2,
+  .spa-booking-form h2,
+  .spa-confirmation-card h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .spa-facilities,
+  .spa-treatments {
+    margin-bottom: 48px;
+  }
+
+  .facilities-grid,
+  .treatments-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .facility-card,
+  .treatment-card {
+    border-radius: 18px;
+  }
+
+  .facility-image-wrapper img,
+  .treatment-image-wrapper {
+    height: auto;
+  }
+
+  .facility-image-wrapper img {
+    height: 220px;
+  }
+
+  .treatment-image-wrapper {
+    height: 210px;
+  }
+
+  .facility-content,
+  .treatment-card-content {
+    padding: 20px 16px;
+  }
+
+  .facility-content h3,
+  .treatment-card h3 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .facility-content p,
+  .treatment-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .treatment-meta {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  .treatment-button {
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 1rem;
+  }
+
+  .spa-booking-wrapper,
+  .spa-confirmation {
+    margin-bottom: 42px;
+  }
+
+  .spa-booking-form,
+  .spa-confirmation-card {
+    max-width: 100%;
+    padding: 24px 16px;
+    border-radius: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .spa-submit-button,
+  .spa-confirmation-button {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  .spa-info-card {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .spa-info-card h3 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  .spa-info-card li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .spa-confirmation-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+
+  .spa-confirmation-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .spa-confirmation-details {
+    padding: 18px 16px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .spa-confirmation-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
+
+/*anpassning för mindre mobiler */
+@media (max-width: 480px) {
+  .luxury-spa-hero {
+    min-height: 50vh;
+  }
+
+  .spa-hero-content {
+    padding: 18px 14px 22px;
+    padding-top: 42px;
+  }
+
+  .luxury-spa-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .spa-hero-text,
+  .spa-intro p,
+  .facility-content p,
+  .treatment-description,
+  .spa-confirmation-text {
+    font-size: 0.95rem;
+  }
+
+  .section-heading h2,
+  .spa-booking-form h2,
+  .spa-confirmation-card h2,
+  .spa-info-card h3,
+  .facility-content h3,
+  .treatment-card h3 {
+    font-size: 1.95rem;
+  }
+
+  .facility-image-wrapper img,
+  .treatment-image-wrapper {
+    height: 190px;
   }
 }
