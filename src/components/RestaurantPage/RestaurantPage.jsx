@@ -187,7 +187,7 @@ function RestaurantPage() {
     <div className="restaurant-page">
       <section className="restaurant-hero">
         <img
-          src="/images/resturang.jpg"
+          src= {`${import.meta.env.BASE_URL}images/resturang.jpg`}
           alt="Restaurang Vela"
           className="restaurant-hero-image"
         />

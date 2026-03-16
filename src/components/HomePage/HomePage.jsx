@@ -52,7 +52,7 @@ function HomePage({rooms, loading, error, onSelectRoom}) {
        <section className="spa-section">
   <div className="spa-background">
     <img
-      src="/images/spa.jpg"
+      src={`${import.meta.env.BASE_URL}images/spa.jpg`}
       alt="Spa avdelning"
       className="spa-background-image"
     />

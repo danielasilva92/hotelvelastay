@@ -217,7 +217,7 @@ function BookingPage({rooms,selectedRoom, setSelectedRoom,addBooking}) {
 
             <div className="confirmation-side">
                 <img
-                    src="/images/bokad.webp"
+                    src= {`${import.meta.env.BASE_URL}images/bokad.webp`}
                     alt={confirmedBooking.roomName}
                     className="confirmation-side-image"
                 />
@@ -256,7 +256,7 @@ return(
     <div className='booking-page'>
   <section className="booking-hero">
   <img
-    src="/images/bokning.jpg"
+    src= {`${import.meta.env.BASE_URL}images/bokning.jpg`}
     alt="Boka ditt rum"
     className="booking-hero-image"
   />
