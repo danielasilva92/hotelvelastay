@@ -26,21 +26,21 @@ function RestaurantPage() {
       name:"Frukost",
       time: "06:30 - 11:00",
       description: "Starta dagen med nybakat bröd, färsk frukt, kaffe och en lugn atmosfär.",
-      image:  "/images/frruu.jpg",
+      image: `${import.meta.env.BASE_URL}images/frruu.jpg`,
     },
     {
         key: "lunch",
       name: "Lunch",
       time: "12:00 - 15:00",
       description: "Säsongsbetonade rätter med eleganta smaker och noggrant utvalda råvaror.",
-      image: "/images/buffe1.jpg",
+      image: `${import.meta.env.BASE_URL}images/buffe1.jpg`,
     },
     {
        key: "dinner", 
       name: "Middag",
       time: "17:00 - 22:00",
       description:  "En varm och exklusiv kvällsupplevelse med moderna rätter och stämningsfull miljö.",
-      image: "/images/middag.webp",
+      image: `${import.meta.env.BASE_URL}images/middag.webp`,
     },
   ];
 
@@ -134,9 +134,9 @@ function RestaurantPage() {
 
   // funderar på om jag ska ta bort denna. blir lite mycket på sidan maybeee
   const galleryImages = [
-    "/images/frukost.webp",
-    "/images/lunch.webp",
-    "/images/frukt.webp",
+     `${import.meta.env.BASE_URL}images/frukost.webp`,
+  `${import.meta.env.BASE_URL}images/lunch.webp`,
+  `${import.meta.env.BASE_URL}images/frukt.webp`,
   ];
 
   const handleInputChange = (e) => {

@@ -17,7 +17,7 @@ const treatments = [
     price: 800,
     description:
       "En klassisk helkroppsmassage som mjukar upp spända muskler och ger kroppen ny energi. Perfekt för djup avslappning och återhämtning.",
-    image: "/images/klassisk.png",
+    image: `${import.meta.env.BASE_URL}images/klassisk.png`,
   },
   {
     name: "Aromaterapi Massage",
@@ -25,7 +25,7 @@ const treatments = [
     price: 1100,
     description:
       "En lugnande massage med noggrant utvalda eteriska oljor som stimulerar sinnena och skapar balans mellan kropp och själ.",
-    image: "/images/aroma.webp",
+    image: `${import.meta.env.BASE_URL}images/aroma.webp`,
   },
   {
     name: "Hot Stone Massage",
@@ -33,7 +33,7 @@ const treatments = [
     price: 900,
     description:
       "En djupt avslappnande behandling där varma stenar används för att lösa upp spänningar och ge kroppen en behaglig värme.",
-    image: "/images/massage-hotstone.jpg",
+    image: `${import.meta.env.BASE_URL}images/massage-hotstone.jpg`,
   },
   {
     name: "Ansiktsbehandling",
@@ -41,7 +41,7 @@ const treatments = [
     price: 950,
     description:
       "En vårdande ansiktsbehandling som rengör, återfuktar och ger huden ny lyster. Din hud lämnas mjuk, fräsch och strålande.",
-    image: "/images/ansikte.png",
+    image: `${import.meta.env.BASE_URL}images/ansikte.png`,
   },
   {
     name: "Kroppspeeling",
@@ -49,7 +49,7 @@ const treatments = [
     price: 600,
     description:
       "En uppfriskande kroppspeeling som varsamt avlägsnar döda hudceller och gör huden silkeslen och återfuktad.",
-    image: "/images/massage-bodyscrub.jpg",
+    image: `${import.meta.env.BASE_URL}images/massage-bodyscrub.jpg`,
   },
   {
     name: "Spa paket",
@@ -57,7 +57,7 @@ const treatments = [
     price: 1800,
     description:
       "En komplett spa-upplevelse med flera behandlingar som ger total avkoppling och förnyad energi för både kropp och sinne.",
-    image: "/images/paketet.png",
+    image: `${import.meta.env.BASE_URL}images/paketet.png`,
   },
 ];
 
@@ -65,17 +65,17 @@ const treatments = [
     {
       title: "Bastu",
       text: "Njut av en varm och rogivande stund i vår exklusiva bastu.",
-      image: "/images/bastu.jpg",
+      image: `${import.meta.env.BASE_URL}images/bastu.jpg`,
     },
     {
       title: "Spa Lounge",
       text: "Koppla av i en stillsam miljö med levande ljus och skandinavisk design.",
-      image: "/images/spapage.png",
+      image: `${import.meta.env.BASE_URL}images/spapage.png`,
     },
     {
       title: "Jacuzzi",
       text: "Låt kroppen återhämta sig i vår uppvärmda jacuzzi med utsikt och lugn atmosfär.",
-      image: "/images/jaccuzzi.png",
+      image: `${import.meta.env.BASE_URL}images/jaccuzzi.png`,
     },
   ];
 
@@ -86,9 +86,9 @@ const treatments = [
   //TODO: tar nog bort dessa sen, blir lite to much ;/
 
   const galleryImages = [
-    "/images/spa22.jpg",
-    "/images/spa33.jpg",
-    "/images/bokning.jpg",
+    `${import.meta.env.BASE_URL}images/spa22.jpg`,
+    `${import.meta.env.BASE_URL}images/spa33.jpg`,
+    `${import.meta.env.BASE_URL}images/bokning.jpg`,
   ];
 
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
@@ -141,7 +141,7 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
     <div className="spa-page">
      <section className="spa-hero luxury-spa-hero">
   <img
-    src="/images/spaavdelning.jpg"
+    src= {`${import.meta.env.BASE_URL}images/spaavdelning.jpg`}
     alt="Spa & Wellness"
     className="spa-hero-image"
   />
