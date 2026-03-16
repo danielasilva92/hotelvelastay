@@ -231,7 +231,7 @@
 
 @media (max-width: 768px) {
  .contact-hero {
-    height: auto;
+    height: 320px;
     min-height: unset;
     margin-bottom: 32px;
   }
@@ -360,12 +360,12 @@
 /*extra breakopint för de minsta mobilerna me*/
 @media (max-width: 480px) {
   .contact-hero {
-    min-height: 42vh;
+    height: 290vh;
    
   }
 
   .contact-hero-content {
-    padding: 24px 14px 18px;
+    padding: 20px 14px 16px;
    
 
   }
