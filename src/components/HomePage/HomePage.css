@@ -181,3 +181,67 @@ SPA HERO SECTION
   }
 
 }
+@media (max-width: 768px) {
+  .hero {
+    min-height: 72vh;
+    height: auto;
+    padding: 40px 16px;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 0 6px;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 260px;
+    padding: 0.95rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .spa-section {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .spa-background {
+    height: 360px;
+    border-radius: 18px;
+  }
+
+  .spa-content {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+  }
+
+  .spa-title {
+    font-size: 2.3rem;
+    line-height: 1.1;
+  }
+
+  .spa-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .spa-cta {
+    width: 100%;
+    max-width: 220px;
+  }
+}
