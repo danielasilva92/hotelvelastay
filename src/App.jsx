@@ -47,7 +47,7 @@ function App() {
             name: "Premium Deluxe",
             price: 1800,
             size: "40 M²",
-            description: "Elegant rum med loungeyta, panoramafönster och exklusiv inredning.",
+            description: "Elegant rum med premium känsla, med balkong och utsikt över vår fina baksida .",
             features: ["Fri Wi-Fi, ", "Smart-TV, ", "Loungeyta,", "Minibar, ", "Regndusch, ", "Panoramautsikt,"],
             imageUrl: "/images/dubbel.png",
           },
@@ -68,7 +68,7 @@ function App() {
             price: 3500,
             size: "60 M²",
             description: 'Luksuriös svit med separat vardagsrum och exklusiva bekvämligheter.',
-            features: ['Fri Wi-Fi, ', 'Vardagsrum, ', 'Balgong, ','Spa badkar, '],
+            features: ['Fri Wi-Fi, ', 'Vardagsrum, ', 'Balkong, ','Spa badkar, '],
             imageUrl: '/images/svit1.png',
           },
           
@@ -151,7 +151,7 @@ function App() {
                <Route path="/contact" element={<ContactPage />} />
                <Route path="/restaurant" element={<RestaurantPage />} />
                <Route path="/spa" element={<SpaPage />} />
-               <Route path="aboutUs" element={<AboutUs />} />
+               <Route path="/aboutUs" element={<AboutUs />} />
           </Routes>
               </main>
               <Footer />
