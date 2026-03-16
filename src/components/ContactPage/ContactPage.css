@@ -407,3 +407,30 @@
   object-position: center 30%;
   display: block;
 }
+
+/*ännu ett testt*/
+@media (max-width: 768px) {
+
+  .contact-hero {
+    height: 360px;
+    margin-bottom: 32px;
+  }
+
+  .contact-hero-content {
+    padding: 20px 16px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 2.6rem;
+    line-height: 0.95;
+    margin-bottom: 12px;
+  }
+
+  .contact-hero-content p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+}
