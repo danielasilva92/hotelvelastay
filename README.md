@@ -1,16 +1,68 @@
-# React + Vite
+# React + Vitev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Live Demo
 
-Currently, two official plugins are available:
+You can view the live project here:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 https://danielasilva92.github.io
+---
 
-## React Compiler
+🏨 Hotel Vela Stay
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hotel Vela Stay är en modern hotellwebbplats byggd med React och Vite.
+Applikationen simulerar en lyxig hotellupplevelse där användare kan utforska rum, boka vistelser, reservera restaurangbord och boka spabehandlingar.
 
-## Expanding the ESLint configuration
+Projektet är utvecklat som en del av mina studier inom frontendutveckling och fokuserar på komponentbaserad struktur, routing och responsiv design.
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+✨ Funktioner
+
+🏠 Startsida med hotellpresentation
+
+🛏 Bokningssida där användare kan välja och boka rum
+
+🍽 Restaurangsida med menyer och bordsbokning
+
+💆 Spa-sida där behandlingar kan bokas
+
+📞 Kontaktsida med kontaktinformation
+
+📱 Responsiv design som fungerar på mobil, surfplatta och dator
+
+Bokningar sparas tillfälligt i LocalStorage för att simulera ett riktigt bokningssystem.
+---
+
+🛠 Tekniker
+
+Projektet är byggt med:
+
+- React
+
+- JavaScript
+
+- React Router
+
+- CSS
+
+- Vite
+
+- LocalStorage
+
+- -
+
+🚀 Starta projektet lokalt
+
+Installera beroenden:
+
+- npm install
+
+Starta utvecklingsservern:
+
+- npm run dev
+
+Öppna sedan i webbläsaren:
+
+http://localhost:5173
+---
