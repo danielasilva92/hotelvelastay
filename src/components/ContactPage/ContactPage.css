@@ -1,6 +1,6 @@
 /* ========================================
    KONTAKTSIDA
-   
+
    ======================================== */
 
 .contact-page {
@@ -230,30 +230,169 @@
 }
 
 @media (max-width: 768px) {
+  .contact-page {
+    padding-bottom: 56px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
   .contact-hero {
-    height: 420px;
+    height: auto;
+    min-height: 68vh;
+    margin-bottom: 48px;
   }
 
   .contact-hero-content {
-    padding: 0 24px;
+    padding: 24px 16px 32px;
+    justify-content: center;
+  }
+
+  .contact-kicker,
+  .section-kicker {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 3rem;
+    line-height: 0.95;
+    margin-bottom: 14px;
   }
 
   .contact-hero-content p {
-    font-size: 18px;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .contact-main {
+    margin-bottom: 48px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .contact-info-card,
   .contact-form-card {
-    padding: 28px 22px;
+    padding: 22px 16px;
+    border-radius: 18px;
+  }
+
+  .contact-info-card h2,
+  .contact-form-card h2 {
+    font-size: 2.3rem;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  .contact-item {
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .contact-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .contact-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+
+  .contact-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 18px;
+  }
+
+  .contact-form label {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .contact-button {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  .contact-visit-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .contact-visit-text {
+    padding: 6px 2px 2px;
+  }
+
+  .contact-visit-text h2 {
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  .contact-visit-text p:last-child {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .contact-visit-image-wrapper {
+    border-radius: 16px;
+  }
+
+  .contact-visit-image-wrapper img {
+    min-height: 260px;
+  }
+}
+
+/*extra breakopint för de minsta mobilerna me*/
+@media (max-width: 480px) {
+  .contact-hero {
+    min-height: 60vh;
+  }
+
+  .contact-hero-content {
+    padding: 20px 14px 28px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 2.35rem;
+  }
+
+  .contact-hero-content p {
+    font-size: 0.95rem;
   }
 
   .contact-info-card h2,
   .contact-form-card h2,
   .contact-visit-text h2 {
-    font-size: 38px;
+    font-size: 2rem;
   }
 
-  .contact-visit-text {
-    padding: 8px;
+  .contact-item h3 {
+    font-size: 1.15rem;
+  }
+
+  .contact-visit-image-wrapper img {
+    min-height: 220px;
   }
 }
