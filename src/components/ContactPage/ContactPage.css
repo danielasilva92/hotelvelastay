@@ -231,14 +231,14 @@
 
 @media (max-width: 768px) {
  .contact-hero {
-    
-    height: auto;
+    height: 360;
+    padding: 20px 16px;
    
   }
 
   .contact-hero-content {
     padding: 28px 16px 20px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
   }
 
