@@ -489,16 +489,16 @@ ERRORMEDDELANDEN
 
 @media (max-width: 768px) {
   .booking-hero {
-    height: auto;
-    min-height: 56vh;
+    height: 360px;
+    min-height: unset;
     max-height: none;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .booking-hero-content {
-    padding: 20px 16px 24px;
-    justify-content: flex-start;
-    padding-top: 48px;
+    padding: 20px 16px;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .booking-kicker {
@@ -694,19 +694,28 @@ ERRORMEDDELANDEN
 
 @media (max-width: 480px) {
   .booking-hero {
-    min-height: 66vh;
+    height: 320px;
+    min-height: unset;
+    max-height: none;
+    margin-bottom: 32px;
   }
 
   .booking-hero-content {
-    padding: 20px 14px 28px;
+    padding: 18px 14px;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .booking-hero-content h1 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
+    line-height: 0.95;
+    margin-bottom: 12px;
   }
 
   .booking-hero-text {
     font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
   }
 
   .confirmation-card {
@@ -728,10 +737,4 @@ ERRORMEDDELANDEN
   .side-summary-box strong {
     font-size: 1.5rem;
   }
-}
-
-@media (max-width:480px) {
-    .booking-hero {
-        min-height: 50vh;
-    }
 }
