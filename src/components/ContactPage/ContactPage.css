@@ -231,10 +231,9 @@
 
 @media (max-width: 768px) {
  .contact-hero {
-    min-height: 78vh;
+    
     height: auto;
-    padding: 32px 16px 48px;
-    background-position: center;
+   
   }
 
   .contact-hero-content {
