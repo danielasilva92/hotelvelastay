@@ -222,7 +222,7 @@
   display: block;
 }
 
-@media (max-width: 1000x) {
+@media (max-width: 1000px) {
   .contact-grid,
   .contact-visit-card {
     grid-template-columns: 1fr;
@@ -239,9 +239,9 @@
   }
 
   .contact-hero {
-    height: auto;
-    min-height: 68vh;
-    margin-bottom: 48px;
+    height: 360px;
+    min-height: unset;
+    margin-bottom: 32px;
   }
 
   .contact-hero-content {
@@ -367,22 +367,25 @@
 /*extra breakopint för de minsta mobilerna me*/
 @media (max-width: 480px) {
   .contact-hero {
-    height: 290vh;
-   
+    height: 300px;
+    min-height: unset;
+    margin-bottom: 32px;
   }
 
   .contact-hero-content {
     padding: 20px 14px 16px;
-   
-
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .contact-hero-content h1 {
     font-size: 2.2rem;
+    line-height: 0.95;
   }
 
   .contact-hero-content p {
     font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   .contact-info-card h2,
@@ -398,10 +401,4 @@
   .contact-visit-image-wrapper img {
     min-height: 220px;
   }
-}
-
-@media (max-width: 480px) {
-    .contact-hero {
-        min-height: 50vh;
-    }
 }
