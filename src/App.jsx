@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 //importerar mina esidkomponenter
-import AboutUs from './components/AbousUs/AboutUs';
+import AboutUs from './components/AboutUs/AboutUs';
 import HomePage from './components/HomePage/HomePage';
 import RestaurantPage from './components/RestaurantPage/RestaurantPage';
 import SpaPage from './components/SpaPage/SpaPage';
