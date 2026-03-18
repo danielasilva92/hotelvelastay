@@ -19,6 +19,7 @@ import ContactPage from './components/ContactPage/ContactPage';
 import BookingPage from './components/BookingPage/BookingPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import ScrollTop from './components/ScrollTop';
 
 
 import './styles/global.css';
@@ -122,12 +123,14 @@ function App() {
   //Navbar och Footer är komponenter som SKA visas på alla sidor!
   return (
     <HashRouter >
+        <ScrollTop />
     {/*div med className App är min huvudcontainer för appen där all annan innehåll kommer att renderas*/}
       <div className="app">
         <Navbar />
 
         <main>
           <Routes>
+          
             <Route path="/" 
             element={
             <HomePage

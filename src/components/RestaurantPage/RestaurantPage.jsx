@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./RestaurantPage.css";
 
 //innan nästa grejer ska implementers så take a break!! rensa huvudet!
@@ -17,6 +17,8 @@ function RestaurantPage() {
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [confirmedBooking, setConfirmedBooking] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
+  const mealSectionRef = useRef(null);
+  const bookingFormRef = useRef(null);
 
 
   //TODO: OM tiden räcker till skapa en meny för lunch/middag med maträtter/priser och Kidsmeny med!
@@ -139,6 +141,32 @@ function RestaurantPage() {
   `${import.meta.env.BASE_URL}images/frukt.webp`,
   ];
 
+  const scrollToMeals = () => {
+  mealSectionRef.current?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
+const scrollToBookingForm = () => {
+  bookingFormRef.current?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
+const handleSelectMeal = (mealName) => {
+  setBooking((prev) => ({
+    ...prev,
+    mealType: mealName,
+  }));
+
+  bookingFormRef.current?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setBooking((prev) => ({
@@ -147,18 +175,6 @@ function RestaurantPage() {
     }));
   };
 
-  // scroll till formuläret, funkar dock inte perfekt på alla browers men är OKEJ just nu
-  const handleSelectMeal = (mealName) => {
-    setBooking((prev) => ({
-      ...prev,
-      mealType: mealName,
-    }));
-
-    const formSection = document.getElementById("restaurant-booking-form");
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -201,14 +217,23 @@ function RestaurantPage() {
             stämningsfulla middagar i en varm och exklusiv miljö.
           </p>
 
-          <div className="restaurant-hero-actions">
-            <a href="#restaurant-booking-form" className="restaurant-hero-button primary">
-              Boka bord
-            </a>
-            <a href="#meal-selection" className="restaurant-hero-button secondary">
-              Utforska måltider
-            </a>
-          </div>
+         <div className="restaurant-hero-actions">
+  <button
+    type="button"
+    className="restaurant-hero-button primary"
+    onClick={scrollToBookingForm}
+  >
+    Boka bord
+  </button>
+
+  <button
+    type="button"
+    className="restaurant-hero-button secondary"
+    onClick={scrollToMeals}
+  >
+    Utforska måltider
+  </button>
+</div>
         </div>
       </section>
 
@@ -231,7 +256,7 @@ function RestaurantPage() {
         </div>
       </section>
 
-      <section className="restaurant-meals container" id="meal-selection">
+      <section className="restaurant-meals container" ref={mealSectionRef}>
         <div className="section-heading">
           <p className="section-kicker">Dagens upplevelser</p>
           <h2>Frukost, lunch & middag</h2>
@@ -425,7 +450,7 @@ function RestaurantPage() {
           </div>
         </section>
       ) : (
-        <section className="restaurant-booking-wrapper container" id="restaurant-booking-form">
+        <section className="restaurant-booking-wrapper container" ref={bookingFormRef}>
           <form className="restaurant-booking-form" onSubmit={handleSubmit}>
             <h2>Boka bord</h2>
 
