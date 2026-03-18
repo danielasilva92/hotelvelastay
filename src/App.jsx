@@ -8,7 +8,7 @@ import { useState } from 'react';
 //BroweserRouter används för att wrappa hela appen 
 //Routes är containern som håller alla mina route definitioner
 
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, route } from 'react-router-dom';
 
 //importerar mina esidkomponenter
 import AboutUs from './components/AbousUs/AboutUs';
@@ -128,7 +128,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" 
+            <route path="/" 
             element={
             <HomePage
             rooms={rooms}
@@ -137,7 +137,7 @@ function App() {
              }
               />
 
-            <Route 
+            <route 
             path="/booking"
              element={
              <BookingPage
@@ -148,10 +148,10 @@ function App() {
               />
               }
                />
-               <Route path="/contact" element={<ContactPage />} />
-               <Route path="/restaurant" element={<RestaurantPage />} />
-               <Route path="/spa" element={<SpaPage />} />
-               <Route path="/aboutUs" element={<AboutUs />} />
+               <route path="/contact" element={<ContactPage />} />
+               <route path="/restaurant" element={<RestaurantPage />} />
+               <route path="/spa" element={<SpaPage />} />
+               <route path="/aboutUs" element={<AboutUs />} />
           </Routes>
               </main>
               <Footer />
