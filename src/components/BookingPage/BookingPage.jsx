@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import {useNavigate} from 'react-router-dom';
 import './BookingPage.css';
 import RoomCard from '../RoomCard/RoomCard';
@@ -22,7 +22,16 @@ function BookingPage({rooms,selectedRoom, setSelectedRoom,addBooking}) {
     const[confirmedBooking, setConfirmedBooking] = useState(null);
     const [error, setError] = useState('');
     const [loading,setLoading] = useState(false);
+    const roomSelectionRef = useRef(null);
+    
   
+    //skapar en scrollfunktion 
+    const scrollToRoomSelection = () => {
+  roomSelectionRef.current?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+};
 
     //varje gång man skriver i inputfälten, uppdateras det i formData
 
@@ -209,7 +218,7 @@ function BookingPage({rooms,selectedRoom, setSelectedRoom,addBooking}) {
                 </p>
 
                 <div className="confirmation-actions">
-                    <button className="btn-primary" onClick={resetBooking}>
+                    <button  type="button" className="btn-primary" onClick={resetBooking}>
                         Gör en ny bokning
                     </button>
                 </div>
@@ -272,10 +281,14 @@ return(
     </p>
 
     <div className="booking-hero-actions">
-      <a href="#booking-room-selection" className="booking-hero-button primary">
-        Välj rum
-      </a>
-    </div>
+  <button
+    type="button"
+    className="booking-hero-button primary"
+    onClick={scrollToRoomSelection}
+  >
+    Välj rum
+  </button>
+</div>
   </div>
 </section>
                     
@@ -285,7 +298,7 @@ return(
 
                         {!selectedRoom ? (
 
-                            <div className="room-selection" id="booking-room-selection">
+                            <div className="room-selection" ref={roomSelectionRef}>
                                 <h2>Välj rum</h2>
                             
                                    <div className="booking-rooms-grid">
@@ -315,7 +328,7 @@ return(
                                             <p>{selectedRoom.description}</p>
                                             <p>{selectedRoom.features}</p>
                                             <div className="selected-room-price">{selectedRoom.price} kr per natt</div>
-                                            <button
+                                            <button  type="button"
                                             className="btn-secondary"
                                             onClick={() => setSelectedRoom(null)}
                                             >

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import "./SpaPage.css";
 
 function SpaPage() {
@@ -93,6 +93,22 @@ const treatments = [
 
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
 const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
+const spaBookingFormRef = useRef(null);
+const spaFacilitiesRef = useRef(null);
+
+const scrollToSpaBookingForm = () => {
+  spaBookingFormRef.current?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
+const scrollToSpaFacilities = () => {
+  spaFacilitiesRef.current?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -108,11 +124,12 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
       treatment: treatmentName,
     }));
 
-    const bookingForm = document.getElementById("spa-booking-form");
-    if (bookingForm) {
-      bookingForm.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+   spaBookingFormRef.current?.scrollIntoView({
+  behavior: "smooth",
+  block: "start",
+});
   };
+  
 
  const handleSubmit = (e) => {
   e.preventDefault();
@@ -155,14 +172,23 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
       Återhämtning, värme och stillhet i en exklusiv miljö skapad för total avkoppling.
     </p>
 
-    <div className="spa-hero-actions">
-      <a href="#spa-booking-form" className="spa-hero-button primary">
-        Boka behandling
-      </a>
-      <a href="#spa-facilities" className="spa-hero-button secondary">
-        Utforska faciliteter
-      </a>
-    </div>
+   <div className="spa-hero-actions">
+  <button
+    type="button"
+    className="spa-hero-button primary"
+    onClick={scrollToSpaBookingForm}
+  >
+    Boka behandling
+  </button>
+
+  <button
+    type="button"
+    className="spa-hero-button secondary"
+    onClick={scrollToSpaFacilities}
+  >
+    Utforska faciliteter
+  </button>
+</div>
   </div>
 </section>
 
@@ -186,7 +212,7 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
         </div>
       </section>
 
-      <section className="spa-facilities container"  id="spa-facilities">
+      <section className="spa-facilities container"  ref={spaFacilitiesRef}>
         <div className="section-heading">
           <p className="section-kicker">Faciliteter</p>
           <h2>Våra spa-upplevelser</h2>
@@ -230,7 +256,7 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
           <span>{treatment.price} SEK</span>
         </div>
 
-        <button
+        <button type="button"
           className="treatment-button"
           onClick={() => handleSelectTreatment(treatment.name)}
         >
@@ -282,7 +308,7 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
         </div>
       </div>
 
-      <button
+      <button type="button"
         className="spa-confirmation-button"
         onClick={() => setBookingConfirmed(false)}
       >
@@ -291,7 +317,7 @@ const [confirmedSpaBooking, setConfirmedSpaBooking] = useState(null);
     </div>
   </section>
 ) : (
-  <section className="spa-booking-wrapper container" id="spa-booking-form">
+  <section className="spa-booking-wrapper container"  ref={spaBookingFormRef}>
     <form className="spa-booking-form" onSubmit={handleSubmit}>
       <h2>Boka behandling</h2>
 
