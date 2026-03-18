@@ -121,7 +121,7 @@ function App() {
   //Jag wrappade hela appen i Router komponenten för att möjliggöra routing
   //Navbar och Footer är komponenter som SKA visas på alla sidor!
   return (
-    <Router basename="/hotelvelastay">
+    <HashRouter >
     {/*div med className App är min huvudcontainer för appen där all annan innehåll kommer att renderas*/}
       <div className="app">
         <Navbar />
@@ -156,7 +156,7 @@ function App() {
               </main>
               <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
