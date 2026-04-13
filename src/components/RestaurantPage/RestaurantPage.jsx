@@ -1,8 +1,6 @@
 import { useState, useRef } from "react";
 import "./RestaurantPage.css";
 
-//innan nästa grejer ska implementers så take a break!! rensa huvudet!
-//TODO: DAGS FÖR PAUS + NOCCO + PROMENAD med kidsen!!
 
 function RestaurantPage() {
   const [booking, setBooking] = useState({
@@ -21,7 +19,7 @@ function RestaurantPage() {
   const bookingFormRef = useRef(null);
 
 
-  //TODO: OM tiden räcker till skapa en meny för lunch/middag med maträtter/priser och Kidsmeny med!
+
   const mealOptions = [
     {
       key: "breakfast",  
@@ -46,7 +44,6 @@ function RestaurantPage() {
     },
   ];
 
-  //TODO: CHECK!! tiden räcker till för en menydata wuhuu
 
   const menuData = {
     breakfast: {

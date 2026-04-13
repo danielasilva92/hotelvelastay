@@ -10,7 +10,7 @@ import { useState } from 'react';
 
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
-//importerar mina esidkomponenter
+
 import AboutUs from './components/AboutUs/AboutUs';
 import HomePage from './components/HomePage/HomePage';
 import RestaurantPage from './components/RestaurantPage/RestaurantPage';
@@ -27,9 +27,7 @@ import './styles/utilities.css';
 import './styles/variables.css';
 
 
-//Huvudkomponenten för appen ( App är hjärtat i min React app :D )
-//funderade på att ha mina rum i en egen fil, MEN har typ 977829 mappar redan :')
-//TODO: DANIELA!! du behöver inte överstrkturera allt! breath girl (ta bort detta innan redovisningen, folk kommer tro du är psyko :') )
+//Huvudkomponenten för appen 
 function App() {
   const [rooms] = useState([      
           {
@@ -98,7 +96,7 @@ function App() {
       const [selectedRoom, setSelectedRoom] = useState(null);
    
       //TODO:Kanske fixa en "favourites"  funktion här sen ?
-      //eller en inloggning så man kommer åt sin bokning kanske ;P
+      //eller en inloggning så man kommer åt sin bokning kanske
   const [bookings, setBookings] = useState(() => {
     const saved = localStorage.getItem('bookings');
     return saved ? JSON.parse(saved) : [];

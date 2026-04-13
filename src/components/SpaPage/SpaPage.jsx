@@ -79,11 +79,7 @@ const treatments = [
     },
   ];
 
-  //känner samma sak här, kanske för mycket??
-  // tungt med så många bilder maybee
-  //behöver isåfall konventera alla 39736689347 bilder
-  // aint nobody got time for that
-  //TODO: tar nog bort dessa sen, blir lite to much ;/
+
 
   const galleryImages = [
     `${import.meta.env.BASE_URL}images/spa22.jpg`,
